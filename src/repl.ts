@@ -1,5 +1,6 @@
 import * as readline from "readline";
-import { CLICommand, getCommands } from "./command.js"
+import { CLICommand } from "./command.js"
+import { getCommands } from "./commands.js"
 
 export function cleanInput(input: string): string[] {
     return input
@@ -16,7 +17,7 @@ export function startREPL(): void {
     const rl = readline.createInterface({
         input: process.stdin,
         output: process.stdout,
-        prompt: "Pokedex> "
+        prompt: "Pokedex > "
     });
 
     rl.prompt();
